@@ -33,16 +33,12 @@ ul{list-style:none}
 .header__logo {
     display: flex;
     align-items: center;
-    width: 280px; /* Largura total para a logo aparecer inteira */
-    height: 80px;
-    overflow: hidden;
+    height: 100%;
 }
 .header__logo-img {
-    width: 450px; /* Aumenta a imagem para compensar as bordas transparentes */
-    max-width: none;
-    height: auto;
-    margin-left: -35px; /* Ajuste fino para centralizar o desenho e não o vazio */
-    transform: scale(1.1);
+    height: 65px;
+    width: auto;
+    object-fit: contain;
 }
 .header__menu{display:flex;gap:32px}
 .header__link{font-size:.9rem;font-weight:500;color:var(--brown-light);position:relative;transition:var(--transition)}
@@ -112,14 +108,10 @@ ul{list-style:none}
 .footer{background:var(--brown);color:rgba(255,255,255,.8);padding:60px 0 0}
 .footer__inner{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:40px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,.1);align-items:flex-start}
 .footer__logo {
-    width: 340px;
-    max-width: none;
+    width: 220px;
     height: auto;
-    margin-top: -60px;
-    margin-bottom: -40px;
-    margin-left: -20px;
-    filter: brightness(10);
-    transform: none;
+    margin-bottom: 20px;
+    display: block;
 }
 .footer__social-links{display:flex;flex-direction:column;gap:12px}
 .footer__desc{font-size:.88rem;line-height:1.7;max-width:300px;opacity:.8}
@@ -161,13 +153,13 @@ ul{list-style:none}
   .sobre,.beneficios,.depoimentos{padding:64px 0}
   .beneficios__grid{grid-template-columns:1fr}
   .btn--lg{padding:16px 28px;font-size:.95rem;width:100%;justify-content:center}
-  .header__logo { width: 180px; }
-  .footer__logo { width: 180px; transform: none; }
+  .header__logo-img { height: 45px; }
+  .footer__logo { margin: 0 auto 20px auto; }
 }
 @media(max-width:480px){
   .container{padding:0 16px}
   .hero__title{font-size:1.75rem}
   .sobre__badge-card{right:8px;bottom:-16px;padding:16px 20px}
-  .header__logo { width: 160px; }
-  .footer__logo { width: 240px; margin: -20px auto 10px; }
+  .header__logo-img { height: 40px; }
+  .footer__logo { width: 180px; margin: 0 auto 20px auto; }
 }
