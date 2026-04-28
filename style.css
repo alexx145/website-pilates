@@ -33,15 +33,16 @@ ul{list-style:none}
 .header__logo {
     display: flex;
     align-items: center;
-    text-decoration: none;
-    min-width: 250px; /* Garante espaço para o nome completo */
+    width: 320px; /* Aumentado para dar mais presença */
+    height: 80px;
+    overflow: hidden;
 }
 .header__logo-img {
-    height: 110px; /* Aumentamos a altura para compensar o vazio e o desenho aparecer grande */
-    width: auto;
-    object-fit: contain;
-    margin-left: -20px; /* Puxa a logo levemente para a esquerda para alinhar visualmente */
-    filter: brightness(1);
+    width: 520px; /* Aumentado para compensar as bordas */
+    max-width: none;
+    height: auto;
+    margin-left: -45px; /* Ajuste para centralizar o nome */
+    transform: scale(1.1);
 }
 .header__menu{display:flex;gap:32px}
 .header__link{font-size:.9rem;font-weight:500;color:var(--brown-light);position:relative;transition:var(--transition)}
@@ -111,12 +112,12 @@ ul{list-style:none}
 .footer{background:var(--brown);color:rgba(255,255,255,.8);padding:60px 0 0}
 .footer__inner{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:40px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,.1);align-items:flex-start}
 .footer__logo {
-    width: 340px;
+    width: 380px; /* Aumentado ligeiramente */
     max-width: none;
     height: auto;
-    margin-top: -60px;
-    margin-bottom: -40px;
-    margin-left: -20px;
+    margin-top: -70px; /* Puxa para cima para alinhar com colunas vizinhas */
+    margin-bottom: -45px;
+    margin-left: -30px; /* Puxa para a esquerda para alinhar com o texto escrito */
     filter: brightness(10);
     transform: none;
 }
@@ -160,8 +161,7 @@ ul{list-style:none}
   .sobre,.beneficios,.depoimentos{padding:64px 0}
   .beneficios__grid{grid-template-columns:1fr}
   .btn--lg{padding:16px 28px;font-size:.95rem;width:100%;justify-content:center}
-  .header__logo-img { height: 80px; margin-left: -10px; }
-  .header__logo { min-width: auto; }
+  .header__logo { width: 180px; }
   .footer__logo { width: 180px; transform: none; }
 }
 @media(max-width:480px){
