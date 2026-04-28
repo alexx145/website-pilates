@@ -33,15 +33,16 @@ ul{list-style:none}
 .header__logo {
     display: flex;
     align-items: center;
-    text-decoration: none;
-    min-width: 250px; /* Garante espaço para o nome completo */
+    width: 280px; /* Largura total para a logo aparecer inteira */
+    height: 80px;
+    overflow: hidden;
 }
 .header__logo-img {
-    height: 110px; /* Aumentamos a altura para compensar o vazio e o desenho aparecer grande */
-    width: auto;
-    object-fit: contain;
-    margin-left: -20px; /* Puxa a logo levemente para a esquerda para alinhar visualmente */
-    filter: brightness(1);
+    width: 450px; /* Aumenta a imagem para compensar as bordas transparentes */
+    max-width: none;
+    height: auto;
+    margin-left: -35px; /* Ajuste fino para centralizar o desenho e não o vazio */
+    transform: scale(1.1);
 }
 .header__menu{display:flex;gap:32px}
 .header__link{font-size:.9rem;font-weight:500;color:var(--brown-light);position:relative;transition:var(--transition)}
@@ -160,15 +161,13 @@ ul{list-style:none}
   .sobre,.beneficios,.depoimentos{padding:64px 0}
   .beneficios__grid{grid-template-columns:1fr}
   .btn--lg{padding:16px 28px;font-size:.95rem;width:100%;justify-content:center}
-  .header__logo-img { height: 80px; margin-left: -10px; }
-  .header__logo { min-width: auto; }
+  .header__logo { width: 180px; }
   .footer__logo { width: 180px; transform: none; }
 }
 @media(max-width:480px){
   .container{padding:0 16px}
   .hero__title{font-size:1.75rem}
   .sobre__badge-card{right:8px;bottom:-16px;padding:16px 20px}
-  .header__logo-img { height: 70px; margin-left: -5px; }
-  .header__logo { min-width: auto; }
+  .header__logo { width: 160px; }
   .footer__logo { width: 240px; margin: -20px auto 10px; }
 }
