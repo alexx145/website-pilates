@@ -36,11 +36,9 @@ ul{list-style:none}
     height: 100%;
 }
 .header__logo-img {
-    height: 75px;
+    height: 45px;
     width: auto;
     object-fit: contain;
-    transform: scale(1.1);
-    transform-origin: left center;
 }
 .header__menu{display:flex;gap:32px}
 .header__link{font-size:.9rem;font-weight:500;color:var(--brown-light);position:relative;transition:var(--transition)}
@@ -52,18 +50,18 @@ ul{list-style:none}
 .header__hamburger span{width:24px;height:2px;background:var(--brown);transition:var(--transition)}
 
 /* ===== HERO ===== */
-.hero{padding:120px 0 80px;overflow:hidden}
-.hero__inner{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.hero{padding:90px 0 40px;overflow:hidden;min-height:calc(100vh - 80px);display:flex;align-items:center}
+.hero__inner{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;width:100%}
 .hero__badge{display:inline-block;background:rgba(153,154,133,.12);color:var(--green-dark);font-size:.78rem;font-weight:600;padding:6px 16px;border-radius:20px;margin-bottom:20px;letter-spacing:.5px}
-.hero__title{font-family:var(--font-heading);font-size:clamp(2rem,4.5vw,3.2rem);color:var(--brown);line-height:1.2;margin-bottom:20px}
+.hero__title{font-family:var(--font-heading);font-size:clamp(1.8rem,4vw,2.8rem);color:var(--brown);line-height:1.2;margin-bottom:20px}
 .hero__title em{font-style:italic;color:var(--green)}
-.hero__subtitle{font-size:1.1rem;color:var(--brown-light);margin-bottom:32px;max-width:480px;line-height:1.75}
-.hero__actions{margin-bottom:36px}
+.hero__subtitle{font-size:1.05rem;color:var(--brown-light);margin-bottom:28px;max-width:480px;line-height:1.7}
+.hero__actions{margin-bottom:28px}
 .hero__trust{display:flex;flex-wrap:wrap;gap:20px}
 .hero__trust-item{display:flex;align-items:center;gap:6px;font-size:.82rem;font-weight:500;color:var(--green-dark)}
 .hero__trust-item svg{color:var(--green);flex-shrink:0}
 .hero__visual{position:relative;display:flex;justify-content:center;align-items:center}
-.hero__image-frame{position:relative;border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-lg);width:100%;max-width:480px;aspect-ratio:4/5;z-index:2}
+.hero__image-frame{position:relative;border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-lg);width:100%;max-width:400px;aspect-ratio:4/5;z-index:2}
 .hero__image{width:100%;height:100%;object-fit:cover;object-position:center top}
 .hero__decoration{position:absolute;border-radius:50%;z-index:1}
 .hero__decoration--1{width:200px;height:200px;background:rgba(153,154,133,.08);top:-40px;right:-40px}
@@ -71,7 +69,7 @@ ul{list-style:none}
 
 /* ===== SOBRE ===== */
 .sobre{padding:100px 0;background:var(--white)}
-.sobre__inner{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.sobre__inner{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
 .sobre__image-col{position:relative}
 .sobre__image-frame{border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-lg);aspect-ratio:3/4}
 .sobre__image{width:100%;height:100%;object-fit:cover;object-position:center top}
@@ -79,6 +77,7 @@ ul{list-style:none}
 .sobre__badge-number{display:block;font-family:var(--font-heading);font-size:2rem;font-weight:700;line-height:1}
 .sobre__badge-text{font-size:.75rem;font-weight:500;opacity:.9;margin-top:4px;display:block}
 .sobre__role{font-size:.95rem;color:var(--green);font-weight:600;margin-bottom:20px}
+.sobre__content{max-width:550px}
 .sobre__text{color:var(--brown-light);margin-bottom:16px;font-size:.95rem}
 .sobre__text strong{color:var(--brown);font-weight:600}
 .sobre .btn--secondary{margin-top:12px}
@@ -108,14 +107,17 @@ ul{list-style:none}
 
 /* ===== LOCALIZAÇÃO ===== */
 .localizacao{padding:100px 0;background:var(--bg)}
-.localizacao__header{text-align:center;margin-bottom:56px}
-.localizacao__inner{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
-.localizacao__address{display:flex;align-items:flex-start;gap:10px;font-style:normal;font-size:.95rem;color:var(--brown-light);line-height:1.7;margin-bottom:28px}
+.localizacao__inner{display:grid;grid-template-columns:2fr 3fr;gap:40px;align-items:stretch}
+.localizacao__info{text-align:left}
+.localizacao__info .section-tag{display:inline-block}
+.localizacao__info .section-title{margin-bottom:20px}
+.localizacao__address{display:flex;align-items:flex-start;gap:10px;font-style:normal;font-size:.95rem;color:var(--brown-light);line-height:1.7;margin-bottom:24px}
 .localizacao__address svg{flex-shrink:0;color:var(--green);margin-top:3px}
-.localizacao__image-frame{border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-lg)}
-.localizacao__image{width:100%;height:auto;display:block;object-fit:cover}
-.localizacao__map{border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-lg)}
-.localizacao__map iframe{display:block;border-radius:var(--radius-lg)}
+.localizacao__image-frame{border-radius:12px;overflow:hidden;box-shadow:var(--shadow-lg);margin-bottom:24px}
+.localizacao__image{width:100%;height:200px;display:block;object-fit:cover}
+.localizacao__cta{width:100%;justify-content:center}
+.localizacao__map{border-radius:12px;overflow:hidden;box-shadow:var(--shadow-lg);min-height:450px}
+.localizacao__map iframe{display:block;width:100%;height:100%;min-height:450px;border-radius:12px}
 
 /* ===== FOOTER ===== */
 .footer{background:var(--brown);color:rgba(255,255,255,.8);padding:60px 0 0}
@@ -164,17 +166,17 @@ ul{list-style:none}
   .header__hamburger{display:flex}
   .header__nav.active{display:flex;position:absolute;top:72px;left:0;right:0;background:rgba(245,245,245,.98);backdrop-filter:blur(16px);padding:24px;border-bottom:1px solid rgba(153,154,133,.1)}
   .header__nav.active .header__menu{flex-direction:column;align-items:center;gap:20px}
-  .hero{padding:100px 0 60px}
+  .hero{padding:100px 0 60px;min-height:auto}
   .sobre,.beneficios,.depoimentos,.localizacao{padding:64px 0}
   .beneficios__grid{grid-template-columns:1fr}
   .btn--lg{padding:16px 28px;font-size:.95rem;width:100%;justify-content:center}
-  .header__logo-img { height: 55px; }
+  .header__logo-img { height: 42px; }
   .footer__logo { width: 210px; margin: 0 auto 20px auto; }
 }
 @media(max-width:480px){
   .container{padding:0 16px}
   .hero__title{font-size:1.75rem}
   .sobre__badge-card{right:8px;bottom:-16px;padding:16px 20px}
-  .header__logo-img { height: 50px; }
+  .header__logo-img { height: 38px; }
   .footer__logo { width: 190px; margin: 0 auto 20px auto; }
 }
