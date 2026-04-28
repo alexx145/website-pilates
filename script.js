@@ -42,80 +42,13 @@ const observer = new IntersectionObserver((entries) => {
 // Add fade-up to animatable elements
 document.querySelectorAll(
     '.hero__content, .hero__visual, .sobre__image-col, .sobre__content, ' +
-    '.benefit-card, .cta-section__inner, .beneficios__header, .depoimentos__header, .carousel'
+    '.benefit-card, .cta-section__inner, .beneficios__header, .depoimentos__header, ' +
+    '.localizacao__header, .localizacao__info, .localizacao__map'
 ).forEach((el, i) => {
     el.classList.add('fade-up');
     el.style.transitionDelay = `${(i % 4) * 0.1}s`;
     observer.observe(el);
 });
-
-// ===== TESTIMONIALS CAROUSEL =====
-(function() {
-    const track = document.querySelector('.carousel__track');
-    const cards = track ? track.querySelectorAll('.testimonial-card') : [];
-    const prevBtn = document.getElementById('carouselPrev');
-    const nextBtn = document.getElementById('carouselNext');
-    const dotsContainer = document.getElementById('carouselDots');
-    if (!track || cards.length === 0) return;
-
-    let currentIndex = 0;
-
-    function getVisibleCount() {
-        if (window.innerWidth <= 768) return 1;
-        if (window.innerWidth <= 992) return 2;
-        return 3;
-    }
-
-    function getMaxIndex() {
-        return Math.max(0, cards.length - getVisibleCount());
-    }
-
-    function buildDots() {
-        dotsContainer.innerHTML = '';
-        const total = getMaxIndex() + 1;
-        for (let i = 0; i < total; i++) {
-            const dot = document.createElement('button');
-            dot.className = 'carousel__dot' + (i === currentIndex ? ' active' : '');
-            dot.setAttribute('aria-label', `Ir para grupo ${i + 1}`);
-            dot.addEventListener('click', () => goTo(i));
-            dotsContainer.appendChild(dot);
-        }
-    }
-
-    function goTo(index) {
-        currentIndex = Math.max(0, Math.min(index, getMaxIndex()));
-        const card = cards[currentIndex];
-        track.scrollTo({ left: card.offsetLeft - track.offsetLeft, behavior: 'smooth' });
-        updateDots();
-    }
-
-    function updateDots() {
-        const dots = dotsContainer.querySelectorAll('.carousel__dot');
-        dots.forEach((d, i) => d.classList.toggle('active', i === currentIndex));
-    }
-
-    prevBtn.addEventListener('click', () => goTo(currentIndex - 1));
-    nextBtn.addEventListener('click', () => goTo(currentIndex + 1));
-
-    // Sync dots on manual scroll/swipe
-    let scrollTimer;
-    track.addEventListener('scroll', () => {
-        clearTimeout(scrollTimer);
-        scrollTimer = setTimeout(() => {
-            const scrollLeft = track.scrollLeft;
-            let closest = 0, minDist = Infinity;
-            cards.forEach((card, i) => {
-                const dist = Math.abs(card.offsetLeft - track.offsetLeft - scrollLeft);
-                if (dist < minDist) { minDist = dist; closest = i; }
-            });
-            currentIndex = Math.min(closest, getMaxIndex());
-            updateDots();
-        }, 100);
-    }, { passive: true });
-
-    window.addEventListener('resize', () => { currentIndex = Math.min(currentIndex, getMaxIndex()); buildDots(); });
-    buildDots();
-})();
 
 // ===== ACTIVE NAV LINK ON SCROLL =====
 const sections = document.querySelectorAll('section[id]');
