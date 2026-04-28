@@ -105,19 +105,29 @@ ul{list-style:none}
 .cta-section .btn--primary{background:#fff;color:var(--green-dark)}
 .cta-section .btn--primary:hover{background:rgba(255,255,255,.9);box-shadow:0 8px 28px rgba(0,0,0,.15)}
 
-/* ===== LOCALIZAÇÃO ===== */
-.localizacao{padding:100px 0;background:var(--bg)}
-.localizacao__inner{display:grid;grid-template-columns:2fr 3fr;gap:40px;align-items:stretch}
-.localizacao__info{text-align:left}
-.localizacao__info .section-tag{display:inline-block}
-.localizacao__info .section-title{margin-bottom:20px}
-.localizacao__address{display:flex;align-items:flex-start;gap:10px;font-style:normal;font-size:.95rem;color:var(--brown-light);line-height:1.7;margin-bottom:24px}
-.localizacao__address svg{flex-shrink:0;color:var(--green);margin-top:3px}
-.localizacao__image-frame{border-radius:12px;overflow:hidden;box-shadow:var(--shadow-lg);margin-bottom:24px}
-.localizacao__image{width:100%;height:200px;display:block;object-fit:cover}
-.localizacao__cta{width:100%;justify-content:center}
-.localizacao__map{border-radius:12px;overflow:hidden;box-shadow:var(--shadow-lg);min-height:450px}
-.localizacao__map iframe{display:block;width:100%;height:100%;min-height:450px;border-radius:12px}
+/* ===== LOCALIZAÇÃO (Layout 50/50 Equilibrado) ===== */
+.localizacao { padding: 100px 0; background: var(--bg); }
+
+/* Grid perfeitamente dividido ao meio */
+.localizacao__inner { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+
+.localizacao__info { text-align: left; }
+.localizacao__info .section-tag { display: inline-block; }
+.localizacao__info .section-title { font-size: clamp(2rem, 4vw, 3rem); line-height: 1.2; margin-bottom: 20px; }
+
+.localizacao__address { display: flex; align-items: flex-start; gap: 10px; font-style: normal; font-size: 1rem; color: var(--brown-light); line-height: 1.7; margin-bottom: 30px; }
+.localizacao__address svg { flex-shrink: 0; color: var(--green); margin-top: 4px; }
+
+/* Foto da fachada elegante e proporcional (4:3) */
+.localizacao__image-frame { border-radius: 16px; overflow: hidden; box-shadow: var(--shadow-lg); margin-bottom: 24px; width: 100%; }
+.localizacao__image { width: 100%; height: auto; aspect-ratio: 4/3; display: block; object-fit: cover; }
+
+/* Botão pegando a largura da foto */
+.localizacao__cta { width: 100%; justify-content: center; }
+
+/* Mapa preenchendo o lado direito harmonicamente */
+.localizacao__map { border-radius: 16px; overflow: hidden; box-shadow: var(--shadow-lg); height: 100%; min-height: 450px; }
+.localizacao__map iframe { display: block; width: 100%; height: 100%; min-height: 450px; border-radius: 16px; border: none; }
 
 /* ===== FOOTER ===== */
 .footer{background:var(--brown);color:rgba(255,255,255,.8);padding:60px 0 0}
