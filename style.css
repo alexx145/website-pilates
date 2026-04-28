@@ -30,7 +30,20 @@ ul{list-style:none}
 /* ===== HEADER ===== */
 .header{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(245,245,245,.85);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid rgba(153,154,133,.1);transition:var(--transition)}
 .header__inner{display:flex;align-items:center;justify-content:space-between;height:80px}
-.header__logo-img{height:40px;width:auto;transform:scale(2.8);transform-origin:left center;margin-left:10px}
+.header__logo {
+    display: flex;
+    align-items: center;
+    height: 60px;
+    width: 220px;
+    overflow: hidden;
+}
+.header__logo-img {
+    width: 340px;
+    max-width: none;
+    height: auto;
+    transform: none;
+    margin-left: -20px;
+}
 .header__menu{display:flex;gap:32px}
 .header__link{font-size:.9rem;font-weight:500;color:var(--brown-light);position:relative;transition:var(--transition)}
 .header__link::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:2px;background:var(--green);transition:var(--transition)}
@@ -43,7 +56,6 @@ ul{list-style:none}
 /* ===== HERO ===== */
 .hero{padding:120px 0 80px;overflow:hidden}
 .hero__inner{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
-.hero__logo-img { display: block; width: 320px; max-width: 90%; height: auto; margin: 0 auto 30px; filter: brightness(1); /* Garanta que a logo verde esteja nítida */ }
 .hero__badge{display:inline-block;background:rgba(153,154,133,.12);color:var(--green-dark);font-size:.78rem;font-weight:600;padding:6px 16px;border-radius:20px;margin-bottom:20px;letter-spacing:.5px}
 .hero__title{font-family:var(--font-heading);font-size:clamp(2rem,4.5vw,3.2rem);color:var(--brown);line-height:1.2;margin-bottom:20px}
 .hero__title em{font-style:italic;color:var(--green)}
@@ -99,7 +111,16 @@ ul{list-style:none}
 /* ===== FOOTER ===== */
 .footer{background:var(--brown);color:rgba(255,255,255,.8);padding:60px 0 0}
 .footer__inner{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:40px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,.1);align-items:flex-start}
-.footer__logo { width: 260px; max-width: 100%; height: auto; margin-top: -50px; margin-bottom: -30px; filter: brightness(10); transform: scale(1.6); transform-origin: left center; }
+.footer__logo {
+    width: 340px;
+    max-width: none;
+    height: auto;
+    margin-top: -60px;
+    margin-bottom: -40px;
+    margin-left: -20px;
+    filter: brightness(10);
+    transform: none;
+}
 .footer__social-links{display:flex;flex-direction:column;gap:12px}
 .footer__desc{font-size:.88rem;line-height:1.7;max-width:300px;opacity:.8}
 .footer__heading{font-family:var(--font-heading);font-size:1rem;color:#fff;margin-bottom:16px}
@@ -128,7 +149,7 @@ ul{list-style:none}
   .sobre__content{text-align:left}
   .beneficios__grid{grid-template-columns:repeat(2,1fr)}
   .footer__inner{grid-template-columns:1fr;text-align:center}
-  .footer__logo{transform:scale(1.2);transform-origin:center center;margin:0 auto 24px}
+  .footer__logo { margin: -30px auto 10px; width: 280px; }
   .footer__desc{margin:0 auto}
 }
 @media(max-width:768px){
@@ -140,13 +161,13 @@ ul{list-style:none}
   .sobre,.beneficios,.depoimentos{padding:64px 0}
   .beneficios__grid{grid-template-columns:1fr}
   .btn--lg{padding:16px 28px;font-size:.95rem;width:100%;justify-content:center}
-  .header__logo-img{transform:scale(1.8);margin-left:8px}
-  .footer__logo{width:180px;transform:scale(1.1)}
+  .header__logo-img { width: 280px; margin-left: -15px; }
+  .footer__logo { width: 180px; transform: none; }
 }
 @media(max-width:480px){
   .container{padding:0 16px}
   .hero__title{font-size:1.75rem}
   .sobre__badge-card{right:8px;bottom:-16px;padding:16px 20px}
-  .header__logo-img{transform:scale(1.6);margin-left:4px}
-  .footer__logo{width:160px;transform:scale(1)}
+  .header__logo-img { width: 240px; margin-left: -10px; }
+  .footer__logo { width: 240px; margin: -20px auto 10px; }
 }
