@@ -30,11 +30,22 @@ ul{list-style:none}
 /* ===== HEADER ===== */
 .header{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(245,245,245,.85);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid rgba(153,154,133,.1);transition:var(--transition)}
 .header__inner{display:flex;align-items:center;justify-content:space-between;height:80px}
-.header__logo { display: flex; align-items: center; gap: 12px; }
-.logo-icon { font-family: var(--font-body); font-weight: 700; font-size: 2.2rem; color: var(--green); letter-spacing: -2px; }
-.logo-text { display: flex; flex-direction: column; }
-.logo-title { font-family: var(--font-heading); font-size: 1.4rem; color: var(--brown); line-height: 1.1; }
-.logo-subtitle { font-family: var(--font-body); font-size: 0.75rem; color: var(--brown-light); font-weight: 300; letter-spacing: 1px; text-transform: uppercase; }
+.header__logo {
+    display: block;
+    width: 220px;
+    height: 55px;
+    position: relative;
+    overflow: hidden;
+}
+.header__logo-img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 380px;
+    max-width: none;
+    height: auto;
+}
 .header__menu{display:flex;gap:32px}
 .header__link{font-size:.9rem;font-weight:500;color:var(--brown-light);position:relative;transition:var(--transition)}
 .header__link::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:2px;background:var(--green);transition:var(--transition)}
@@ -152,13 +163,13 @@ ul{list-style:none}
   .sobre,.beneficios,.depoimentos{padding:64px 0}
   .beneficios__grid{grid-template-columns:1fr}
   .btn--lg{padding:16px 28px;font-size:.95rem;width:100%;justify-content:center}
-  .header__logo { transform: scale(0.9); transform-origin: left center; }
+  .header__logo { width: 180px; }
   .footer__logo { width: 180px; transform: none; }
 }
 @media(max-width:480px){
   .container{padding:0 16px}
   .hero__title{font-size:1.75rem}
   .sobre__badge-card{right:8px;bottom:-16px;padding:16px 20px}
-  .header__logo { transform: scale(0.8); transform-origin: left center; }
+  .header__logo { width: 160px; }
   .footer__logo { width: 240px; margin: -20px auto 10px; }
 }
