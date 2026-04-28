@@ -30,7 +30,7 @@ ul{list-style:none}
 /* ===== HEADER ===== */
 .header{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(245,245,245,.85);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid rgba(153,154,133,.1);transition:var(--transition)}
 .header__inner{display:flex;align-items:center;justify-content:space-between;height:80px}
-.header__logo-img{height:40px;width:auto;transform:scale(2.8);transform-origin:left center;margin-left:10px}
+.header__logo-img { height: 65px; width: auto; transform: scale(1.8); transform-origin: left center; }
 .header__menu{display:flex;gap:32px}
 .header__link{font-size:.9rem;font-weight:500;color:var(--brown-light);position:relative;transition:var(--transition)}
 .header__link::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:2px;background:var(--green);transition:var(--transition)}
