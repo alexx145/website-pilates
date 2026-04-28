@@ -43,7 +43,7 @@ const observer = new IntersectionObserver((entries) => {
 document.querySelectorAll(
     '.hero__content, .hero__visual, .sobre__image-col, .sobre__content, ' +
     '.benefit-card, .cta-section__inner, .beneficios__header, .depoimentos__header, ' +
-    '.localizacao__header, .localizacao__info, .localizacao__map'
+    '.localizacao__info, .localizacao__map'
 ).forEach((el, i) => {
     el.classList.add('fade-up');
     el.style.transitionDelay = `${(i % 4) * 0.1}s`;
