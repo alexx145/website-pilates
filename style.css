@@ -96,7 +96,21 @@ ul{list-style:none}
 /* ===== DEPOIMENTOS (Elfsight Widget) ===== */
 .depoimentos{padding:100px 0;background:var(--white)}
 .depoimentos__header{text-align:center;margin-bottom:56px}
-
+ 
+/* ===== PLANOS ===== */
+.planos{padding:100px 0;background:var(--bg)}
+.planos__inner{display:grid;grid-template-columns:1.2fr 1fr;gap:64px;align-items:center}
+.planos__content{max-width:580px}
+.planos__text{color:var(--brown-light);margin-bottom:20px;font-size:1rem}
+.planos__text strong{color:var(--brown);font-weight:700}
+.planos__visual{display:flex;justify-content:center}
+.planos__card{background:var(--white);padding:40px;border-radius:var(--radius-lg);box-shadow:var(--shadow-lg);border:1px solid rgba(153,154,133,.1);width:100%;max-width:440px;position:relative}
+.planos__card-title{font-family:var(--font-heading);font-size:1.5rem;color:var(--brown);margin-bottom:24px;text-align:center}
+.planos__list{display:flex;flex-direction:column;gap:18px;margin-bottom:32px}
+.planos__list li{display:flex;align-items:flex-start;gap:12px;font-size:.95rem;color:var(--brown);line-height:1.4}
+.planos__list svg{color:var(--green);flex-shrink:0;margin-top:2px}
+.planos__card-footer{font-size:.85rem;color:var(--green-dark);background:rgba(153,154,133,.08);padding:16px;border-radius:var(--radius);text-align:center;font-weight:500;line-height:1.5}
+ 
 /* ===== CTA SECTION ===== */
 .cta-section{padding:80px 0;background:linear-gradient(135deg,var(--green),var(--green-dark))}
 .cta-section__inner{text-align:center;max-width:640px;margin:0 auto}
@@ -155,6 +169,9 @@ ul{list-style:none}
   .hero__image-frame{max-width:400px;margin:0 auto}
   .sobre__image-col{max-width:400px;margin:0 auto}
   .sobre__content{text-align:left}
+  .planos__inner{grid-template-columns:1fr;gap:48px}
+  .planos__content{max-width:100%;text-align:center}
+  .planos__visual{order:-1}
   .beneficios__grid{grid-template-columns:repeat(2,1fr)}
   .localizacao__inner{grid-template-columns:1fr}
   .localizacao__map iframe{height:350px}
