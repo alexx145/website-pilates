@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | Camila Cerqueira Studio de Pilates</title>
+    <link rel="icon" type="image/png" href="../icone-verde.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .blog-header { padding: 120px 0 60px; text-align: center; background: var(--bg); }
+        .blog-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 32px; padding: 40px 0 100px; }
+        .blog-card { background: var(--white); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); transition: var(--transition); display: flex; flex-direction: column; border: 1px solid rgba(153,154,133,.08); }
+        .blog-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); }
+        .blog-card__img { width: 100%; height: 200px; object-fit: cover; }
+        .blog-card__content { padding: 24px; display: flex; flex-direction: column; flex-grow: 1; }
+        .blog-card__title { font-family: var(--font-heading); font-size: 1.25rem; color: var(--brown); margin-bottom: 12px; line-height: 1.3; }
+        .blog-card__summary { color: var(--brown-light); font-size: 0.95rem; margin-bottom: 20px; line-height: 1.6; flex-grow: 1; }
+        .blog-card__link { color: var(--green); font-weight: 600; font-size: 0.9rem; display: inline-flex; align-items: center; gap: 4px; }
+        .blog-card__link:hover { color: var(--green-dark); }
+        #loading { text-align: center; padding: 40px; color: var(--brown-light); }
+    </style>
+</head>
+<body>
+    <!-- HEADER ADAPTADO -->
+    <header class="header" id="header">
+        <div class="container header__inner">
+            <a href="../index.html" class="header__logo">
+                <img src="../Logo verde lateral.png" alt="Camila Cerqueira" class="header__logo-img">
+            </a>
+            <nav class="header__nav" id="mainNav">
+                <ul class="header__menu">
+                    <li><a href="../index.html#sobre" class="header__link">Sobre</a></li>
+                    <li><a href="../index.html#beneficios" class="header__link">Benefícios</a></li>
+                    <li><a href="../index.html#planos" class="header__link">Planos</a></li>
+                    <li><a href="index.html" class="header__link">Blog</a></li>
+                </ul>
+            </nav>
+            <a href="https://wa.me/5531975120312" class="btn btn--primary header__cta" target="_blank" rel="noopener">
+                Agendar Aula
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <section class="blog-header">
+            <div class="container">
+                <span class="section-tag">Blog</span>
+                <h1 class="section-title">Dicas e Conteúdos sobre Pilates</h1>
+                <p class="section-subtitle">Tudo o que você precisa saber para viver sem dores e com mais qualidade de vida.</p>
+            </div>
+        </section>
+
+        <section class="blog-list">
+            <div class="container">
+                <div id="loading">Carregando artigos...</div>
+                <div class="blog-grid" id="blogGrid">
+                    <!-- Cards de posts serão injetados aqui pelo JS -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script type="module" src="blog.js"></script>
+</body>
+</html>
